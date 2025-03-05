@@ -8,7 +8,9 @@ public class Email {
 	private String password;
 	private String department;
 	private int mailboxCapacity;
+	private String email;
 	private String alternateEmail;
+	private String companySuffix = "mycomp.com";
 	
 	private int passwordLength = 9;
 	
@@ -22,6 +24,9 @@ public class Email {
 		
 		this.password = generatePassword(this.passwordLength);
 		System.out.println("Password: " + this.password);
+		
+		this.email = generatePassword();
+		System.out.println("Your email is: " + this.email);
 	}
 	
 	private String generateDepartment() {
@@ -46,5 +51,9 @@ public class Email {
 		}
 		
 		return new String(password);
+	}
+	
+	private String generatePassword() {
+		return name.toLowerCase() + "." + surname.toLowerCase() + "@" + department + "." + companySuffix;
 	}
 }
