@@ -10,6 +10,8 @@ public class Email {
 	private int mailboxCapacity;
 	private String alternateEmail;
 	
+	private int passwordLength = 9;
+	
 	public Email(String name, String surname) {
 		this.name = name;
 		this.surname = surname;
@@ -18,7 +20,7 @@ public class Email {
 		this.department = generateDepartment();
 		System.out.println("Department: " + this.department);
 		
-		this.password = generatePassword(9);
+		this.password = generatePassword(this.passwordLength);
 		System.out.println("Password: " + this.password);
 	}
 	
