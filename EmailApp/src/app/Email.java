@@ -7,7 +7,7 @@ public class Email {
 	private String surname;
 	private String password;
 	private String department;
-	private int mailboxCapacity;
+	private int mailboxCapacity = 500;
 	private String email;
 	private String alternateEmail;
 	private String companySuffix = "mycomp.com";
@@ -55,5 +55,13 @@ public class Email {
 	
 	private String generatePassword() {
 		return name.toLowerCase() + "." + surname.toLowerCase() + "@" + department + "." + companySuffix;
+	}
+	
+	public void setMailboxCapacity(int capacity) {
+		this.mailboxCapacity = capacity;
+	}
+	
+	public void setAlternateEmail(String email) {
+		this.alternateEmail = email;
 	}
 }
