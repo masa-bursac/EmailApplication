@@ -64,4 +64,8 @@ public class Email {
 	public void setAlternateEmail(String email) {
 		this.alternateEmail = email;
 	}
+	
+	public void changePassword(String password) {
+		this.password = password;
+	}
 }
